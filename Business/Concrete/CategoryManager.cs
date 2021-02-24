@@ -12,10 +12,6 @@ namespace Business.Concrete
     {
         ICategoryDal _categoryDal; //bağımlılığı constructor injection ile yaptım.
 
-        public CategoryManager()
-        {
-        }
-
         public CategoryManager(ICategoryDal categoryDal)
         {
             _categoryDal = categoryDal;
@@ -34,14 +30,14 @@ namespace Business.Concrete
             return new SuccessDataResult<Category>(_categoryDal.Get(c => c.CategoryId == categoryId));
         }
 
-        IDataResult<List<Category>> ICategoryService.GetAll()
-        {
-            throw new NotImplementedException();
-        }
+        //IDataResult<List<Category>> ICategoryService.GetAll()
+        //{
+        //    throw new NotImplementedException();
+        //}
 
-        IDataResult<Category> ICategoryService.GetById(int categoryId)
-        {
-            throw new NotImplementedException();
-        }
+        //IDataResult<Category> ICategoryService.GetById(int categoryId)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }
